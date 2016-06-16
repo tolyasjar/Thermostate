@@ -13,3 +13,5 @@
 
 @end
 
+bool isItCelsius;
+int backgroundValue;

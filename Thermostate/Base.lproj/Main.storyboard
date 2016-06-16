@@ -1,25 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="UqM-rd-CDB">
+                                <rect key="frame" x="31" y="404" width="299" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="EJi-Ei-MjH"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kv-5q-kce">
+                                <rect key="frame" x="127" y="176" width="121" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="GmN-i2-3MI"/>
+                                    <constraint firstAttribute="width" constant="121" id="XET-Ih-4as"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-Ol-sQo">
+                                <rect key="frame" x="33" y="62" width="295" height="29"/>
+                                <segments>
+                                    <segment title="Celsius"/>
+                                    <segment title="Fahrenheit"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="H22-lr-asK"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="leading" secondItem="UqM-rd-CDB" secondAttribute="leading" id="2eR-tL-Hsn"/>
+                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="5DN-dL-9N3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tba-Ol-sQo" secondAttribute="trailing" constant="31" id="88l-wA-0If"/>
+                            <constraint firstItem="0kv-5q-kce" firstAttribute="top" secondItem="Tba-Ol-sQo" secondAttribute="bottom" constant="86" id="Ap1-Lz-oxl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UqM-rd-CDB" secondAttribute="bottom" constant="233" id="EQL-Jb-g8a"/>
+                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="Hch-J2-XaG"/>
+                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="trailing" secondItem="UqM-rd-CDB" secondAttribute="trailing" id="diK-EI-8LY"/>
+                            <constraint firstItem="0kv-5q-kce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u7j-iJ-xHt"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="degreeLabel" destination="0kv-5q-kce" id="8cK-ig-6Zb"/>
+                        <outlet property="segmentedControl" destination="Tba-Ol-sQo" id="gpT-NS-QLl"/>
+                        <outlet property="slider" destination="UqM-rd-CDB" id="Had-Lq-jrU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="343.5" y="227.5"/>
         </scene>
     </scenes>
 </document>
