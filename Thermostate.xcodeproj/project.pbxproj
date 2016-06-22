@@ -13,6 +13,8 @@
 		C824866D1D13162800EDE56C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C824866B1D13162800EDE56C /* Main.storyboard */; };
 		C824866F1D13162800EDE56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C824866E1D13162800EDE56C /* Assets.xcassets */; };
 		C82486721D13162800EDE56C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82486701D13162800EDE56C /* LaunchScreen.storyboard */; };
+		C8F5E86C1D192C8C0030DF13 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F5E86B1D192C8C0030DF13 /* CoreLocation.framework */; };
+		C8F5E86E1D192C930030DF13 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F5E86D1D192C930030DF13 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C824866E1D13162800EDE56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C82486711D13162800EDE56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82486731D13162800EDE56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8F5E86B1D192C8C0030DF13 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C8F5E86D1D192C930030DF13 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8F5E86E1D192C930030DF13 /* MapKit.framework in Frameworks */,
+				C8F5E86C1D192C8C0030DF13 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,8 @@
 		C82486561D13162800EDE56C = {
 			isa = PBXGroup;
 			children = (
+				C8F5E86D1D192C930030DF13 /* MapKit.framework */,
+				C8F5E86B1D192C8C0030DF13 /* CoreLocation.framework */,
 				C82486611D13162800EDE56C /* Thermostate */,
 				C82486601D13162800EDE56C /* Products */,
 			);
@@ -302,6 +310,7 @@
 				C82486781D13162800EDE56C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

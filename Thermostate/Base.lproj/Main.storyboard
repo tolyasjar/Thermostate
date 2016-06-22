@@ -27,8 +27,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kv-5q-kce">
                                 <rect key="frame" x="127" y="176" width="121" height="98"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="GmN-i2-3MI"/>
-                                    <constraint firstAttribute="width" constant="121" id="XET-Ih-4as"/>
+                                    <constraint firstAttribute="width" constant="121" id="ZoV-rK-sTw"/>
+                                    <constraint firstAttribute="height" constant="98" id="bHl-VR-we8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,22 +44,35 @@
                                     <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="H22-lr-asK"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Actual Degree will load in a moment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLl-Jb-pVd">
+                                <rect key="frame" x="30" y="486" width="315" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="aM5-Wf-YSA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="leading" secondItem="UqM-rd-CDB" secondAttribute="leading" id="2eR-tL-Hsn"/>
-                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="5DN-dL-9N3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tba-Ol-sQo" secondAttribute="trailing" constant="31" id="88l-wA-0If"/>
-                            <constraint firstItem="0kv-5q-kce" firstAttribute="top" secondItem="Tba-Ol-sQo" secondAttribute="bottom" constant="86" id="Ap1-Lz-oxl"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UqM-rd-CDB" secondAttribute="bottom" constant="233" id="EQL-Jb-g8a"/>
-                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="Hch-J2-XaG"/>
-                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="trailing" secondItem="UqM-rd-CDB" secondAttribute="trailing" id="diK-EI-8LY"/>
-                            <constraint firstItem="0kv-5q-kce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u7j-iJ-xHt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZLl-Jb-pVd" secondAttribute="bottom" constant="142" id="6y9-AZ-amu"/>
+                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="trailing" secondItem="UqM-rd-CDB" secondAttribute="trailing" id="CIK-xf-uLy"/>
+                            <constraint firstItem="ZLl-Jb-pVd" firstAttribute="centerX" secondItem="0kv-5q-kce" secondAttribute="centerX" id="DDY-BM-sEm"/>
+                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="leading" secondItem="UqM-rd-CDB" secondAttribute="leading" id="E0q-om-EOQ"/>
+                            <constraint firstItem="ZLl-Jb-pVd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="MLG-HK-5nI"/>
+                            <constraint firstItem="0kv-5q-kce" firstAttribute="top" secondItem="Tba-Ol-sQo" secondAttribute="bottom" constant="86" id="Mpk-er-wdu"/>
+                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="OKg-9n-iX9"/>
+                            <constraint firstItem="ZLl-Jb-pVd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X6h-o1-xJt"/>
+                            <constraint firstItem="Tba-Ol-sQo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="X9P-dF-KKJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tba-Ol-sQo" secondAttribute="trailing" constant="31" id="hF8-8c-gbL"/>
+                            <constraint firstItem="ZLl-Jb-pVd" firstAttribute="top" secondItem="UqM-rd-CDB" secondAttribute="bottom" constant="52" id="lkJ-bU-1jB"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="degreeLabel" destination="0kv-5q-kce" id="8cK-ig-6Zb"/>
+                        <outlet property="epicdegreeLabel" destination="ZLl-Jb-pVd" id="StB-AE-P0I"/>
                         <outlet property="segmentedControl" destination="Tba-Ol-sQo" id="gpT-NS-QLl"/>
                         <outlet property="slider" destination="UqM-rd-CDB" id="Had-Lq-jrU"/>
                     </connections>
